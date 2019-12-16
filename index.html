@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>basic :: navigator.userAgent property</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background: #f1f1f1;
+	color: #555;
+}
+ul, dt, dl {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	min-width: 440px;
+}
+.title {
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #555;
+}
+.container {
+	margin-top: 35px;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+$(function(){
+	var agent=navigator.userAgent.toLowerCase();
+
+	if(agent.indexOf("android") != -1 || agent.indexOf("iphone") != -1){
+		// Mobile URL입니다.
+		location.href="mobile/index.html";
+	}
+	else{
+		// PC URL입니다.
+		location.href="pc/index.html";
+	}
+});
+</script>
+</head>
+
+<body>
+<h1 class="title">basic :: navigator.userAgent property</h1>
+<div class="container">
+</div>
+</body>
+</html>
